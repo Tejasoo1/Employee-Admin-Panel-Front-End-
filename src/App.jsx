@@ -9,6 +9,9 @@ npm install styled-components
 npm install react-hot-toast
 npm install js-cookie
 
+Frontend GitHub Link:- 
+https://github.com/Tejasoo1/Employee-Admin-Panel-Front-End-.git
+
 */
 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
