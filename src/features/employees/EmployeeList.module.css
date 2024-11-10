@@ -1,0 +1,46 @@
+.employeecontainer {
+}
+
+.paraheader {
+  background-color: yellow;
+  padding: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.createEmployeeContainer {
+}
+
+.innerContainer {
+  margin-left: 95rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.label {
+  font-weight: bold;
+  color: #555;
+}
+
+.inputField {
+  padding: 1rem;
+  border: 0.1rem solid #c2c2c2;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  width: 75%;
+  margin: 1rem 0px;
+}
+
+.innerContainer a:link,
+.innerContainer a:visited {
+  padding: 0.5rem 3rem;
+  border-radius: 1px;
+  background-color: #71f571;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.innerContainer a:hover {
+  background-color: #37da37;
+}

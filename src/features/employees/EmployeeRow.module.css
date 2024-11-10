@@ -1,0 +1,41 @@
+.imgTag {
+  /* height: 10%; */
+  display: block;
+  width: 6rem;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.5) translateX(-7px);
+}
+
+/* Styling buttons & icons */
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  background-color: #f0f0f0; /* Light grey background */
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e0e0e0; /* Slightly darker on hover */
+}
+
+.icon {
+  color: #333; /* Dark grey color for the icon */
+  font-size: 1.2rem;
+}
+
+.icon.editIcon {
+  color: #007bff; /* Blue for edit icon */
+}
+
+.icon.deleteIcon {
+  color: #dc3545; /* Red for delete icon */
+}

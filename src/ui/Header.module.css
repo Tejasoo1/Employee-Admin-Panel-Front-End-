@@ -1,0 +1,27 @@
+.appHeader {
+  display: flex;
+  align-items: center;
+  gap: 85rem;
+  justify-content: space-around;
+  height: 6.5rem;
+  background-color: #dddddd;
+}
+
+.navigationtab {
+  display: flex;
+  align-items: center;
+  gap: 5.5rem;
+  font-size: 1.8rem;
+  margin-left: 2rem;
+}
+
+.navigationtab a:link,
+.navigationtab a:visited {
+  text-decoration: none;
+  color: #696868;
+  transition: all 0.3s;
+}
+
+.navigationtab a:hover {
+  color: #06e99d;
+}
