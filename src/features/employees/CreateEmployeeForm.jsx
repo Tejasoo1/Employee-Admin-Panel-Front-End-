@@ -18,6 +18,8 @@ function CreateEmployeeForm() {
 
   const isEditSession = Object.keys(employeeToEdit || {}).length > 0;
 
+  console.log({ isEditSession });
+
   let defaultValuesObj = {};
   if (isEditSession) {
     defaultValuesObj = {
@@ -40,7 +42,6 @@ function CreateEmployeeForm() {
     defaultValues: isEditSession ? defaultValuesObj : {},
   });
 
-  const [image, setImage] = useState({});
   const [loading, setLoading] = useState(false);
 
   const { employeesArr, setEmployeesArr } = useEmployeeContext();
@@ -66,7 +67,7 @@ function CreateEmployeeForm() {
         console.log("File is not uploaded");
       } else {
         //Helper function (uploadImageToCloudinary)
-        imageUrl = await uploadImageToCloudinary(image);
+        imageUrl = await uploadImageToCloudinary(data.imgUpload[0]);
       }
 
       let uploadData = { ...data };
@@ -104,6 +105,7 @@ function CreateEmployeeForm() {
         navigate("/app/employeelist");
       }
     } catch (err) {
+      console.log(err.message);
       toast.error("Employee not Created OR Updated. Please try again.", {
         duration: 5000,
         style: {
@@ -116,6 +118,8 @@ function CreateEmployeeForm() {
       setLoading(false);
     }
   };
+
+  console.log({ errors });
 
   return (
     <>
@@ -271,7 +275,6 @@ function CreateEmployeeForm() {
               },
             })}
             className={styles.fileInput}
-            onChange={(e) => setImage(e.target.files[0])}
           />
           {errors?.imgUpload && (
             <p className={styles.errorText}>{errors.imgUpload.message}</p>
